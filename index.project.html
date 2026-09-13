@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVP Corporates — Premium Corporate Accommodation in MIHAN, Nagpur</title>
+  <meta name="description" content="Premium furnished corporate accommodation at Anjani Exotica, MIHAN, Khapri, Nagpur — ideal for executives, project teams, families and long stays." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#f2eee6;
+      --paper-2:#e9e3d8;
+      --ink:#171815;
+      --muted:#66655e;
+      --line:rgba(23,24,21,.18);
+      --dark:#171a16;
+      --light:#f5f1e8;
+      --serif:"Cormorant Garamond", Georgia, serif;
+      --sans:"DM Sans", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--paper)}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;letter-spacing:-.01em}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    img{display:block;width:100%}
+    .shell{width:min(100%,1600px);margin:0 auto;overflow:hidden}
+    .pad{padding-left:clamp(22px,4vw,68px);padding-right:clamp(22px,4vw,68px)}
+    .eyebrow,.section-label{font-size:11px;line-height:1.2;text-transform:uppercase;letter-spacing:.15em;font-weight:500}
+    .section-label{color:#5d5d57;margin-bottom:28px}
+    .display{font-family:var(--serif);font-weight:400;letter-spacing:-.045em;line-height:.88}
+    .section-title{font-family:var(--serif);font-weight:400;font-size:clamp(50px,6.2vw,96px);line-height:.91;letter-spacing:-.045em;margin:0}
+    .section-intro{font-size:17px;line-height:1.65;color:#4f514b;max-width:650px;margin:0}
+    .rule{border-top:1px solid var(--line)}
+    .text-link{display:inline-block;font-size:13px;border-bottom:1px solid currentColor;padding-bottom:4px}
+
+    /* NAV */
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:10}
+    .brand{font-family:var(--serif);font-size:34px;font-weight:500;letter-spacing:-.04em}
+    .reserve-link{font-size:13px;border-bottom:1px solid currentColor;padding-bottom:3px}
+
+    /* HERO */
+    .hero{min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,48vw);border-bottom:1px solid var(--line)}
+    .hero-copy{display:flex;flex-direction:column;min-height:100vh}
+    .hero-copy .nav{padding-left:clamp(22px,4vw,68px);padding-right:clamp(22px,3vw,42px)}
+    .hero-main{padding:clamp(54px,7vh,94px) clamp(28px,5vw,82px) 0 clamp(22px,4vw,68px);display:flex;flex:1;flex-direction:column;justify-content:center}
+    .hero .eyebrow{margin-bottom:28px;color:#575a53}
+    .hero h1{font-size:clamp(72px,8.45vw,142px);margin:0;max-width:790px}
+    .hero-desc{margin:33px 0 0;max-width:610px;font-size:16px;line-height:1.58;color:#454740}
+    .hero-actions{display:flex;gap:28px;margin-top:34px;align-items:center;font-size:13px}
+    .hero-actions .secondary{color:#555850}
+    .hero-stats{margin-top:auto;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+    .stat{padding:24px 18px 27px 0;border-right:1px solid var(--line)}
+    .stat+.stat{padding-left:20px}
+    .stat:last-child{border-right:0}
+    .stat-value{font-family:var(--serif);font-size:38px;line-height:.9}
+    .stat-label{font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:#65665f;margin-top:10px;line-height:1.35}
+    .hero-media{height:100vh;position:sticky;top:0;overflow:hidden;background:#9a7d64}
+    .hero-media img{height:100%;object-fit:cover}
+    .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.13),transparent 42%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);pointer-events:none}
+    .hero-location{position:absolute;bottom:26px;left:28px;right:28px;display:flex;justify-content:space-between;color:white;font-size:10px;text-transform:uppercase;letter-spacing:.12em;z-index:2;text-shadow:0 1px 16px rgba(0,0,0,.35)}
+
+    /* ABOUT */
+    .about{padding-top:112px;padding-bottom:120px}
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(64px,8vw,160px);align-items:start}
+    .about-copy{padding-top:54px}
+    .about-copy p{font-size:18px;line-height:1.64;margin:0 0 24px;max-width:625px}
+    .about-meta{margin-top:70px;display:flex;gap:24px;flex-wrap:wrap;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#5e5f58}
+
+    /* ACCOMMODATION */
+    .accommodation{padding-top:104px;padding-bottom:118px;background:#ede8df}
+    .accommodation-head{display:grid;grid-template-columns:.88fr 1.12fr;gap:60px;margin-bottom:68px}
+    .stay-list{border-top:1px solid var(--line)}
+    .stay-row{display:grid;grid-template-columns:70px minmax(260px,.85fr) 1.3fr 205px 34px;gap:28px;align-items:center;min-height:148px;border-bottom:1px solid var(--line);padding:22px 2px;transition:padding .25s ease,background .25s ease}
+    .stay-row:hover{padding-left:12px;background:rgba(255,255,255,.24)}
+    .stay-num,.stay-availability{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:#686960}
+    .stay-title{font-family:var(--serif);font-size:38px;line-height:.98;letter-spacing:-.03em}
+    .stay-copy p{font-size:13px;line-height:1.55;color:#575952;margin:0 0 11px;max-width:520px}
+    .ideal{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#74756e}
+    .stay-arrow{font-size:22px;text-align:right}
+
+    /* CORPORATE */
+    .corporate{background:var(--dark);color:var(--light);padding-top:112px;padding-bottom:120px}
+    .corporate .section-label{color:#aaa99f}
+    .corporate-head{display:grid;grid-template-columns:.78fr 1.22fr;gap:60px;margin-bottom:74px}
+    .corporate-copy{display:grid;grid-template-columns:1fr 1fr;gap:70px;border-top:1px solid rgba(245,241,232,.22);padding-top:34px}
+    .corporate-copy p{font-size:16px;line-height:1.65;color:#d7d5ce;margin:0;max-width:610px}
+    .benefit-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(245,241,232,.22)}
+    .benefit{padding:17px 18px 17px 0;border-bottom:1px solid rgba(245,241,232,.18);font-size:12px;color:#e8e5dc}
+    .benefit:nth-child(even){padding-left:18px;border-left:1px solid rgba(245,241,232,.18)}
+    .benefit:before{content:"↗";font-size:11px;margin-right:10px;color:#989b92}
+
+    /* AMENITIES */
+    .amenities{padding-top:112px;padding-bottom:120px}
+    .amenities-head{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;margin-bottom:66px}
+    .amenity-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .amenity-card figure{margin:0;overflow:hidden;aspect-ratio:4/5;background:#ccc}
+    .amenity-card img{height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+    .amenity-card:hover img{transform:scale(1.025)}
+    .amenity-card h3{font-family:var(--serif);font-size:31px;font-weight:400;margin:22px 0 8px;letter-spacing:-.02em}
+    .amenity-card p{font-size:13px;line-height:1.55;color:#62635d;margin:0;max-width:330px}
+    .amenities-extra{margin-top:72px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+    .amenity-line{padding:21px 16px 21px 0;border-bottom:1px solid var(--line);font-size:12px;display:flex;align-items:center;gap:10px;min-height:62px}
+    .amenity-line:before{content:"·";font-size:20px;line-height:0;color:#777870}
+
+    /* EXPERIENCE */
+    .experience{padding-top:112px;padding-bottom:124px;background:#d8d1c5}
+    .experience-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;margin-bottom:70px}
+    .experience-gallery{display:grid;grid-template-columns:1.05fr .95fr;grid-template-rows:auto auto;gap:18px;align-items:start}
+    .gallery-item{margin:0}
+    .gallery-item img{height:100%;object-fit:cover}
+    .gallery-item.one{grid-row:span 2}
+    .gallery-item.one img{aspect-ratio:4/5}
+    .gallery-item.two img,.gallery-item.three img{aspect-ratio:16/10}
+    .gallery-item figcaption{font-family:var(--serif);font-size:23px;line-height:1.05;margin-top:14px;max-width:580px;letter-spacing:-.02em}
+    .experience-statement{margin-top:92px;display:grid;grid-template-columns:.78fr 1.22fr;gap:70px;border-top:1px solid var(--line);padding-top:32px}
+    .experience-statement p{font-size:18px;line-height:1.62;margin:0;max-width:670px}
+
+
+    /* ACTUAL PROPERTY PHOTO STRIP */
+    .inside-head{margin-top:112px;border-top:1px solid var(--line);padding-top:30px;display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+    .inside-head h3{font-family:var(--serif);font-size:clamp(38px,4.2vw,64px);line-height:.96;font-weight:400;letter-spacing:-.035em;margin:0;max-width:760px}
+    .inside-grid{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
+    .inside-shot{margin:0}
+    .inside-shot:nth-child(even){margin-top:48px}
+    .inside-shot img{aspect-ratio:3/4;object-fit:cover;background:#c9c2b6}
+    .inside-shot figcaption{margin-top:12px;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#65665f}
+    @media (max-width: 900px){.inside-head{grid-template-columns:1fr;gap:26px}.inside-grid{grid-template-columns:1fr 1fr}.inside-shot:nth-child(even){margin-top:28px}}
+    @media (max-width: 600px){.inside-head{margin-top:78px}.inside-grid{gap:10px}.inside-shot:nth-child(even){margin-top:20px}.inside-shot figcaption{font-size:8px}}
+
+    /* LOCATION */
+    .location{padding-top:112px;padding-bottom:120px}
+    .location-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;margin-bottom:66px}
+    .location-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;border-top:1px solid var(--line)}
+    .location-copy{padding:36px clamp(20px,3vw,48px) 40px 0;display:flex;flex-direction:column}
+    .location-copy p{font-size:16px;line-height:1.65;color:#50524c;max-width:620px;margin:0}
+    .address{font-family:var(--serif);font-size:35px;line-height:1.04;margin:54px 0 0;max-width:540px;letter-spacing:-.03em}
+    .location-facts{border-left:1px solid var(--line)}
+    .location-fact{display:grid;grid-template-columns:135px 1fr;gap:22px;padding:30px;border-bottom:1px solid var(--line);min-height:120px;align-items:center}
+    .location-fact .big{font-family:var(--serif);font-size:42px;line-height:.9;letter-spacing:-.03em}
+    .location-fact p{font-size:12px;line-height:1.5;color:#5b5d56;margin:0}
+
+    /* WHY */
+    .why{padding-top:110px;padding-bottom:120px;background:#ede8df}
+    .why-head{display:grid;grid-template-columns:.78fr 1.22fr;gap:60px;margin-bottom:70px}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}
+    .reason{min-height:260px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:27px 28px;display:flex;flex-direction:column;transition:background .25s ease}
+    .reason:hover{background:#e6dfd4}
+    .reason-num{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#71726b}
+    .reason h3{font-family:var(--serif);font-size:34px;line-height:.98;font-weight:400;letter-spacing:-.03em;margin:58px 0 13px}
+    .reason p{font-size:12px;line-height:1.58;color:#5d5f58;margin:auto 0 0;max-width:330px}
+
+    /* CTA / FOOTER */
+    .reserve{background:#1a1d18;color:var(--light);padding-top:112px}
+    .reserve-top{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px;padding-bottom:90px}
+    .reserve .section-label{color:#aaa99f}
+    .reserve-title{font-size:clamp(72px,9vw,146px);max-width:970px}
+    .reserve-body{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px;padding-bottom:84px}
+    .reserve-body p{font-size:16px;line-height:1.62;color:#d2d0c9;margin:0;max-width:680px}
+    .reserve-actions{display:flex;gap:26px;align-items:center;margin-top:30px;font-size:13px}
+    .reserve-actions .ghost{color:#a8aaa2}
+    .footer-main{border-top:1px solid rgba(245,241,232,.2);display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:50px;padding-top:44px;padding-bottom:62px}
+    .footer-logo{font-family:var(--serif);font-size:55px;line-height:.78;letter-spacing:-.04em}
+    .footer-blurb{font-size:12px;line-height:1.55;color:#aaa99f;margin-top:24px;max-width:285px}
+    .footer-col h4{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#898a84;font-weight:500;margin:0 0 18px}
+    .footer-col p,.footer-col a{display:block;font-size:13px;line-height:1.65;margin:0;color:#e5e2da}
+    .footer-bottom{border-top:1px solid rgba(245,241,232,.2);display:flex;justify-content:space-between;gap:30px;padding-top:20px;padding-bottom:24px;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#8f9089}
+
+    /* MOTION */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+    .reveal.is-visible{opacity:1;transform:none}
+
+    @media (max-width: 1040px){
+      .hero{grid-template-columns:1fr;min-height:auto}
+      .hero-copy{min-height:auto}
+      .hero-main{min-height:670px;padding-bottom:0}
+      .hero-media{height:75vh;position:relative}
+      .about-grid,.accommodation-head,.corporate-head,.amenities-head,.experience-head,.location-head,.why-head,.reserve-top,.reserve-body,.experience-statement{grid-template-columns:1fr;gap:38px}
+      .about-copy{padding-top:0}
+      .stay-row{grid-template-columns:58px 1fr 185px 30px}
+      .stay-copy{display:none}
+      .corporate-copy{grid-template-columns:1fr;gap:36px}
+      .amenity-cards{grid-template-columns:1fr 1fr}
+      .amenity-card:last-child{grid-column:span 2;width:50%}
+      .amenities-extra{grid-template-columns:repeat(3,1fr)}
+      .experience-gallery{grid-template-columns:1fr 1fr}
+      .location-grid{grid-template-columns:1fr}
+      .location-facts{border-left:0;border-top:1px solid var(--line)}
+      .why-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-main{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 680px){
+      .nav{height:68px}
+      .brand{font-size:30px}
+      .hero-main{padding-top:48px;min-height:615px}
+      .hero h1{font-size:clamp(66px,20vw,92px)}
+      .hero-stats{grid-template-columns:1fr 1fr}
+      .stat:nth-child(2){border-right:0}
+      .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .hero-location{font-size:9px;left:20px;right:20px}
+      .about,.accommodation,.corporate,.amenities,.experience,.location,.why{padding-top:82px;padding-bottom:88px}
+      .section-title{font-size:clamp(52px,15.5vw,76px)}
+      .about-copy p{font-size:16px}
+      .stay-row{grid-template-columns:42px 1fr 28px;min-height:108px;gap:16px}
+      .stay-availability{display:none}
+      .stay-title{font-size:31px}
+      .benefit-grid{grid-template-columns:1fr}
+      .benefit:nth-child(even){padding-left:0;border-left:0}
+      .amenity-cards{grid-template-columns:1fr}
+      .amenity-card:last-child{grid-column:auto;width:auto}
+      .amenities-extra{grid-template-columns:1fr 1fr}
+      .experience-gallery{grid-template-columns:1fr}
+      .gallery-item.one{grid-row:auto}
+      .gallery-item.one img,.gallery-item.two img,.gallery-item.three img{aspect-ratio:4/5}
+      .location-fact{grid-template-columns:105px 1fr;padding:24px 0}
+      .why-grid{grid-template-columns:1fr}
+      .reason{min-height:220px}
+      .reason h3{margin-top:44px}
+      .reserve{padding-top:82px}
+      .footer-main{grid-template-columns:1fr;gap:38px}
+      .footer-bottom{flex-direction:column}
+    }
+
+
+    /* ============================================
+       CINEMATIC HERO + TRANSITIONING SITE HEADER
+       Reference: original SVP navigation behavior
+       ============================================ */
+    body{padding-top:0}
+    .site-header{
+      position:fixed;z-index:1000;top:0;left:0;right:0;height:76px;
+      display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+      padding:0 clamp(22px,3.3vw,56px);color:#fff;
+      background:transparent;border-bottom:1px solid transparent;
+      transition:height .35s ease,background-color .4s ease,color .35s ease,border-color .4s ease,box-shadow .4s ease;
+    }
+    .site-header.is-solid{
+      height:70px;color:var(--ink);background:rgba(242,238,230,.965);
+      border-bottom-color:rgba(23,24,21,.13);box-shadow:0 1px 0 rgba(255,255,255,.18);
+      -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    }
+    .site-brand{justify-self:start;display:flex;align-items:baseline;gap:8px;white-space:nowrap}
+    .site-brand-main{font-family:var(--serif);font-size:25px;font-weight:500;line-height:1;letter-spacing:-.035em}
+    .site-brand-sub{font-size:8px;line-height:1;text-transform:uppercase;letter-spacing:.16em;opacity:.78}
+    .desktop-nav{display:flex;align-items:center;gap:clamp(26px,2.6vw,48px);height:100%}
+    .desktop-nav a{position:relative;font-size:10px;line-height:1;text-transform:none;letter-spacing:.01em;opacity:.84;transition:opacity .2s ease}
+    .desktop-nav a:hover,.desktop-nav a.is-active{opacity:1}
+    .desktop-nav a:after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+    .desktop-nav a:hover:after,.desktop-nav a.is-active:after{transform:scaleX(1)}
+    .header-actions{justify-self:end;display:flex;align-items:center;gap:12px}
+    .header-reserve{min-width:98px;height:34px;padding:0 14px;display:inline-flex;align-items:center;justify-content:space-between;gap:15px;background:#f5f1e8;color:#161713;font-size:8px;text-transform:uppercase;letter-spacing:.13em;transition:background-color .35s ease,color .35s ease,transform .2s ease}
+    .header-reserve:hover{transform:translateY(-1px)}
+    .site-header.is-solid .header-reserve{background:#171815;color:#f5f1e8}
+    .mobile-menu-toggle{display:none;width:36px;height:36px;border:0;background:transparent;color:currentColor;padding:8px;cursor:pointer}
+    .mobile-menu-toggle span{display:block;height:1px;background:currentColor;margin:5px 0;transition:transform .25s ease,opacity .25s ease}
+    .mobile-menu{display:none}
+
+    .hero.hero-cinematic{position:relative;display:block;min-height:100svh;height:100svh;border-bottom:0;overflow:hidden;background:#5e554b;color:#fff}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 36%;transform:scale(1.012);animation:hero-settle 1.8s cubic-bezier(.2,.7,.2,1) both}
+    @keyframes hero-settle{from{transform:scale(1.055)}to{transform:scale(1.012)}}
+    .hero-scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,8,.66) 0%,rgba(10,10,8,.46) 39%,rgba(10,10,8,.16) 72%,rgba(10,10,8,.11) 100%),linear-gradient(0deg,rgba(10,10,8,.34) 0%,transparent 44%,rgba(10,10,8,.12) 100%)}
+    .hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;padding-top:76px}
+    .hero-content{margin-top:clamp(78px,13.5vh,150px);width:min(930px,78vw)}
+    .hero-kicker{font-size:9px;line-height:1.2;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.82);margin-bottom:22px}
+    .hero.hero-cinematic h1{font-family:var(--serif);font-weight:400;font-size:clamp(72px,8.7vw,142px);line-height:.82;letter-spacing:-.047em;margin:0;text-wrap:balance;text-shadow:0 2px 28px rgba(0,0,0,.12)}
+    .hero.hero-cinematic h1 em{font-weight:400;font-style:italic}
+    .hero-description{font-size:12px;line-height:1.55;color:rgba(255,255,255,.86);max-width:570px;margin:28px 0 0;letter-spacing:-.005em}
+    .hero-ctas{display:flex;align-items:center;gap:10px;margin-top:28px}
+    .hero-cta{height:40px;display:inline-flex;align-items:center;justify-content:center;gap:22px;padding:0 16px;font-size:8px;text-transform:uppercase;letter-spacing:.13em;border:1px solid rgba(255,255,255,.4);transition:background .25s ease,color .25s ease,border-color .25s ease}
+    .hero-cta.primary{background:#f4f0e7;color:#171815;border-color:#f4f0e7;min-width:132px;justify-content:space-between}
+    .hero-cta.primary:hover{background:#fff;border-color:#fff}
+    .hero-cta.secondary{color:#fff;min-width:155px}
+    .hero-cta.secondary:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.75)}
+    .hero-foot{margin-top:auto;min-height:68px;padding:19px 0 20px;border-top:1px solid rgba(255,255,255,.22);display:grid;grid-template-columns:1fr auto;align-items:end;gap:30px;font-size:8px;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.72)}
+    .hero-facts{display:flex;gap:28px;flex-wrap:wrap}
+    .hero-facts span{display:inline-flex;gap:8px;align-items:baseline}
+    .hero-facts strong{font-family:var(--serif);font-size:16px;font-weight:400;letter-spacing:-.02em;color:#fff;text-transform:none}
+    .hero-scroll{white-space:nowrap}
+
+    @media (max-width: 900px){
+      .site-header{grid-template-columns:1fr auto;height:70px;padding:0 20px}
+      .desktop-nav{display:none}
+      .site-brand-sub{display:none}
+      .header-reserve{min-width:88px}
+      .mobile-menu-toggle{display:block}
+      .header-actions{gap:5px}
+      .mobile-menu{position:fixed;z-index:999;top:0;left:0;right:0;background:var(--paper);color:var(--ink);padding:92px 22px 32px;transform:translateY(-110%);transition:transform .42s cubic-bezier(.2,.75,.2,1);display:block;border-bottom:1px solid var(--line)}
+      .mobile-menu.is-open{transform:translateY(0)}
+      .mobile-menu a{display:flex;justify-content:space-between;align-items:center;padding:17px 0;border-top:1px solid var(--line);font-family:var(--serif);font-size:32px;line-height:1}
+      .mobile-menu a:last-child{border-bottom:1px solid var(--line)}
+      .site-header.menu-open{color:var(--ink);background:var(--paper);border-bottom-color:transparent}
+      .site-header.menu-open .header-reserve{background:#171815;color:#f5f1e8}
+      .site-header.menu-open .mobile-menu-toggle span:first-child{transform:translateY(3px) rotate(45deg)}
+      .site-header.menu-open .mobile-menu-toggle span:last-child{transform:translateY(-3px) rotate(-45deg)}
+      .hero.hero-cinematic{height:100svh;min-height:720px}
+      .hero-inner{padding-top:70px}
+      .hero-content{width:min(100%,720px);margin-top:clamp(92px,15vh,130px)}
+      .hero.hero-cinematic h1{font-size:clamp(68px,14.5vw,110px);line-height:.84}
+    }
+    @media (max-width: 600px){
+      .site-brand-main{font-size:24px}
+      .header-reserve{height:32px;min-width:82px;padding:0 11px;font-size:7px}
+      .hero.hero-cinematic{min-height:680px}
+      .hero-bg{object-position:52% 39%}
+      .hero-scrim{background:linear-gradient(90deg,rgba(10,10,8,.58),rgba(10,10,8,.20) 90%),linear-gradient(0deg,rgba(10,10,8,.45),transparent 48%,rgba(10,10,8,.18))}
+      .hero-content{margin-top:clamp(92px,15vh,118px);width:100%}
+      .hero-kicker{max-width:250px;line-height:1.5;margin-bottom:18px}
+      .hero.hero-cinematic h1{font-size:clamp(62px,18vw,86px);line-height:.84;max-width:96%}
+      .hero-description{font-size:11px;max-width:88%;margin-top:24px}
+      .hero-ctas{align-items:flex-start;flex-wrap:wrap;margin-top:24px}
+      .hero-cta{height:38px}
+      .hero-foot{grid-template-columns:1fr;gap:13px;min-height:92px;align-items:start}
+      .hero-facts{gap:12px 20px}
+      .hero-scroll{display:none}
+    }
+    @media (prefers-reduced-motion:reduce){.hero-bg{animation:none}.site-header,.mobile-menu{transition:none}}
+
+  </style>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <a href="#top" class="site-brand" aria-label="SVP Corporates home">
+      <span class="site-brand-main">SVP</span>
+      <span class="site-brand-sub">Corporates · Nagpur</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#accommodation" data-section="accommodation">Stay</a>
+      <a href="#amenities" data-section="amenities">Amenities</a>
+      <a href="#about" data-section="about">About</a>
+      <a href="#location" data-section="location">Location</a>
+      <a href="#contact" data-section="reserve">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#reserve" class="header-reserve">Reserve <span>↘</span></a>
+      <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="#accommodation">Stay <span>01</span></a>
+    <a href="#amenities">Amenities <span>02</span></a>
+    <a href="#about">About <span>03</span></a>
+    <a href="#location">Location <span>04</span></a>
+    <a href="#contact">Contact <span>05</span></a>
+  </nav>
+
+  <main class="shell">
+    <section class="hero hero-cinematic" id="top">
+      <img class="hero-bg" src="assets/property-exterior-courtyard.jpeg" fetchpriority="high" decoding="async" alt="Anjani Exotica residential property in MIHAN, Khapri, Nagpur" />
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-inner pad">
+        <div class="hero-content">
+          <div class="hero-kicker">Premium Corporate Accommodation · MIHAN, Nagpur</div>
+          <h1>Your home<br><em>away from home</em><br>in MIHAN.</h1>
+          <p class="hero-description">Thoughtfully designed accommodation for business travellers, corporate professionals, project teams and long-stay guests — combining the comfort of a fully furnished home with the convenience of a premium stay.</p>
+          <div class="hero-ctas">
+            <a href="#reserve" class="hero-cta primary">Book your stay <span>↘</span></a>
+            <a href="#accommodation" class="hero-cta secondary">Explore our rooms</a>
+          </div>
+        </div>
+        <div class="hero-foot">
+          <div class="hero-facts">
+            <span><strong>6</strong> 2 BHK apartments</span>
+            <span><strong>6</strong> private rooms</span>
+            <span><strong>~500 m</strong> Khapri Metro</span>
+          </div>
+          <div class="hero-scroll">Comfort · Convenience · Connectivity ↓</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about pad" id="about">
+      <div class="about-grid reveal">
+        <div>
+          <div class="section-label">01 About SVP</div>
+          <h2 class="section-title">Stay comfortable.<br>Work better.<br>Feel at home.</h2>
+        </div>
+        <div class="about-copy">
+          <p>At SVP Corporates, we understand that a comfortable stay makes all the difference — especially when you're away from home for work.</p>
+          <p>Our fully furnished residences balance privacy, space and modern amenities, making them ideal for corporate executives, professionals, families and extended stays.</p>
+          <p>Located at Anjani Exotica in MIHAN, Nagpur, SVP Corporates keeps you close to key business and transportation hubs while giving you a peaceful place to unwind after a busy day.</p>
+          <div class="about-meta"><span>Comfort</span><span>Convenience</span><span>Connectivity</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="accommodation pad" id="accommodation">
+      <div class="accommodation-head reveal">
+        <div class="section-label">02 Accommodation</div>
+        <div>
+          <h2 class="section-title">Choose the stay<br>that suits you.</h2>
+          <p class="section-intro" style="margin-top:28px">Whether you're travelling alone, with colleagues or with your family, choose from complete apartments or private rooms designed around different lengths and styles of stay.</p>
+        </div>
+      </div>
+      <div class="stay-list reveal">
+        <a class="stay-row" href="#reserve">
+          <span class="stay-num">01</span>
+          <span class="stay-title">2 BHK Corporate Apartments</span>
+          <span class="stay-copy"><p>Spacious, fully furnished homes for corporate stays, families and teams — with the privacy of your own living space.</p><span class="ideal">Families · Corporate teams · Long stays</span></span>
+          <span class="stay-availability">6 apartments</span>
+          <span class="stay-arrow">→</span>
+        </a>
+        <a class="stay-row" href="#reserve">
+          <span class="stay-num">02</span>
+          <span class="stay-title">Private Room · Attached Bath</span>
+          <span class="stay-copy"><p>A comfortable private bedroom with an attached bathroom for individual corporate travellers who value privacy and convenience.</p><span class="ideal">Business travellers · Executives · Short & long stays</span></span>
+          <span class="stay-availability">3 rooms</span>
+          <span class="stay-arrow">→</span>
+        </a>
+        <a class="stay-row" href="#reserve">
+          <span class="stay-num">03</span>
+          <span class="stay-title">Private Room · Shared Bath</span>
+          <span class="stay-copy"><p>A practical, comfortable option for professionals and project teams looking for a convenient corporate stay at great value.</p><span class="ideal">Professionals · Project teams · Extended stays</span></span>
+          <span class="stay-availability">3 rooms</span>
+          <span class="stay-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="corporate pad" id="corporate">
+      <div class="corporate-head reveal">
+        <div class="section-label">03 Corporate Stays</div>
+        <h2 class="section-title">Made for business.<br>Designed for comfort.</h2>
+      </div>
+      <div class="corporate-copy reveal">
+        <p>Travelling for a project? Setting up a new team in Nagpur? Hosting visiting executives? SVP Corporates offers a practical alternative to conventional hotel rooms, giving corporate guests more space, more privacy and the comfort of a home.</p>
+        <div class="benefit-grid">
+          <div class="benefit">Spacious accommodation</div>
+          <div class="benefit">Fully furnished residences</div>
+          <div class="benefit">Complimentary breakfast</div>
+          <div class="benefit">Airport pick-up & drop</div>
+          <div class="benefit">High-speed Wi-Fi</div>
+          <div class="benefit">Modern recreational facilities</div>
+          <div class="benefit">24×7 security</div>
+          <div class="benefit">Short & long stays</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="amenities pad" id="amenities">
+      <div class="amenities-head reveal">
+        <div class="section-label">04 Amenities</div>
+        <div>
+          <h2 class="section-title">Everything you need,<br>already considered.</h2>
+          <p class="section-intro" style="margin-top:28px">We take care of the essentials — and a little more — so you can focus on work, rest and the reason you came to Nagpur.</p>
+        </div>
+      </div>
+      <div class="amenity-cards">
+        <article class="amenity-card reveal"><figure><img src="assets/bedroom-white-frame.jpeg" loading="lazy" decoding="async" alt="Fully furnished bedroom at SVP Corporates"></figure><h3>Fully furnished rooms</h3><p>Comfortable bedrooms with air conditioning, fresh linen and the essentials needed for an easy stay.</p></article>
+        <article class="amenity-card reveal"><figure><img src="assets/living-dining.jpeg" loading="lazy" decoding="async" alt="Shared living and dining space at SVP Corporates"></figure><h3>Space to live & work</h3><p>Open living and dining areas give longer stays more breathing room than a conventional hotel room.</p></article>
+        <article class="amenity-card reveal"><figure><img src="assets/bathroom-vanity.jpeg" loading="lazy" decoding="async" alt="Bathroom vanity and guest amenities at SVP Corporates"></figure><h3>Thoughtful essentials</h3><p>Clean, well-maintained bathroom spaces and practical details designed for comfortable everyday routines.</p></article>
+      </div>
+      <div class="amenities-extra reveal">
+        <div class="amenity-line">Air Conditioning</div>
+        <div class="amenity-line">High-Speed Wi-Fi</div>
+        <div class="amenity-line">Electric Kettle</div>
+        <div class="amenity-line">Fully Furnished</div>
+        <div class="amenity-line">Swimming Pool</div>
+        <div class="amenity-line">Modern Gym</div>
+        <div class="amenity-line">Pool Table</div>
+        <div class="amenity-line">CCTV Surveillance</div>
+        <div class="amenity-line">24×7 Security</div>
+        <div class="amenity-line">Complimentary Breakfast</div>
+        <div class="amenity-line">Airport Pick-Up & Drop</div>
+      </div>
+    </section>
+
+    <section class="experience pad" id="experience">
+      <div class="experience-head reveal">
+        <div class="section-label">05 The Experience</div>
+        <h2 class="section-title">More than just<br>a place to stay.</h2>
+      </div>
+      <div class="experience-gallery">
+        <figure class="gallery-item one reveal"><img src="assets/bedroom-floral-detail.jpeg" loading="lazy" decoding="async" alt="Prepared bedroom with fresh linen at SVP Corporates"><figcaption>A calm, prepared room to return to at the end of the workday.</figcaption></figure>
+        <figure class="gallery-item two reveal"><img src="assets/dining-detail.jpeg" loading="lazy" decoding="async" alt="Shared dining table at SVP Corporates"><figcaption>Shared spaces with room to eat, meet and settle into a longer stay.</figcaption></figure>
+        <figure class="gallery-item three reveal"><img src="assets/property-gardens-play-area.jpeg" loading="lazy" decoding="async" alt="Landscaped residential grounds at Anjani Exotica"><figcaption>A residential setting with open space beyond the apartment.</figcaption></figure>
+      </div>
+      <div class="experience-statement reveal">
+        <div class="section-label">Live · Work · Unwind</div>
+        <p>After a busy day, take a dip in the swimming pool, get a workout in at the gym or unwind over a game of pool. Your stay isn't simply about having a room — it's about having a comfortable space to live, work and unwind.</p>
+      </div>
+      <div class="inside-head reveal">
+        <div class="section-label">Inside SVP</div>
+        <h3>A closer look at the spaces you’ll actually stay in.</h3>
+      </div>
+      <div class="inside-grid">
+        <figure class="inside-shot reveal"><img src="assets/bedroom-walnut-frame.jpeg" loading="lazy" decoding="async" alt="Second furnished bedroom at SVP Corporates"><figcaption>Furnished bedroom</figcaption></figure>
+        <figure class="inside-shot reveal"><img src="assets/bathroom-shower.jpeg" loading="lazy" decoding="async" alt="Bathroom and shower at SVP Corporates"><figcaption>Bathroom & shower</figcaption></figure>
+        <figure class="inside-shot reveal"><img src="assets/dining-wide.jpeg" loading="lazy" decoding="async" alt="Dining and common area at SVP Corporates"><figcaption>Shared dining space</figcaption></figure>
+        <figure class="inside-shot reveal"><img src="assets/interior-art-detail.jpeg" loading="lazy" decoding="async" alt="Interior details at SVP Corporates"><figcaption>Interior details</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="location pad" id="location">
+      <div class="location-head reveal">
+        <div class="section-label">06 Location</div>
+        <div>
+          <h2 class="section-title">Stay connected to<br>what matters.</h2>
+          <p class="section-intro" style="margin-top:28px">Located at Anjani Exotica, MIHAN, Khapri, SVP Corporates puts you close to Nagpur's emerging business and transportation hub.</p>
+        </div>
+      </div>
+      <div class="location-grid reveal">
+        <div class="location-copy">
+          <p>Khapri Metro Station is roughly half a kilometre away, making movement across Nagpur simple and convenient. MIHAN's business district and Nagpur Airport are also within easy reach.</p>
+          <div class="address">Anjani Exotica,<br>MIHAN, Khapri,<br>Nagpur, Maharashtra.</div>
+        </div>
+        <div class="location-facts">
+          <div class="location-fact"><div class="big">~500 m</div><p>Khapri Metro Station — convenient access to Nagpur's metro network.</p></div>
+          <div class="location-fact"><div class="big">MIHAN</div><p>Stay close to Nagpur's major business and project corridor.</p></div>
+          <div class="location-fact"><div class="big">Airport</div><p>Easy access, with complimentary pick-up and drop included for guests.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why pad" id="why">
+      <div class="why-head reveal">
+        <div class="section-label">07 Why SVP</div>
+        <h2 class="section-title">A better rhythm<br>for longer stays.</h2>
+      </div>
+      <div class="why-grid reveal">
+        <article class="reason"><div class="reason-num">01 · Feel at home</div><h3>Space that feels lived in.</h3><p>Fully furnished residences with the comfort and essentials you need to settle in.</p></article>
+        <article class="reason"><div class="reason-num">02 · Prime location</div><h3>Close to work, easy to reach.</h3><p>A MIHAN address near the metro, business district and airport connections.</p></article>
+        <article class="reason"><div class="reason-num">03 · Easy arrival</div><h3>Travel, handled.</h3><p>Complimentary airport pick-up and drop helps make arrival and departure effortless.</p></article>
+        <article class="reason"><div class="reason-num">04 · Breakfast included</div><h3>Start the day right.</h3><p>Complimentary breakfast gives busy workdays one less thing to plan around.</p></article>
+        <article class="reason"><div class="reason-num">05 · Beyond the room</div><h3>Room to switch off.</h3><p>Gym, swimming pool and pool table create a fuller stay beyond work hours.</p></article>
+        <article class="reason"><div class="reason-num">06 · Safe & secure</div><h3>Peace of mind, 24×7.</h3><p>Round-the-clock security and CCTV surveillance across the property.</p></article>
+      </div>
+    </section>
+
+    <footer class="reserve pad" id="reserve">
+      <div class="reserve-top reveal">
+        <div class="section-label">Your Next Stay</div>
+        <h2 class="display reserve-title">Comfort. Work.<br>Repeat.</h2>
+      </div>
+      <div class="reserve-body reveal">
+        <div></div>
+        <div>
+          <p>Whether you're visiting Nagpur for a few days, a few weeks or an extended corporate assignment, SVP Corporates gives you the space and comfort to make your stay feel like home.</p>
+          <div class="reserve-actions"><a href="#contact" class="text-link">Book now →</a><a href="#contact" class="ghost">Contact us</a></div>
+        </div>
+      </div>
+      <div class="footer-main" id="contact">
+        <div><div class="footer-logo">SVP<br>Corporates</div><div class="footer-blurb">Premium corporate accommodation in MIHAN, Nagpur.<br><br>Stay. Work. Relax. Repeat.</div></div>
+        <div class="footer-col"><h4>Location</h4><p>Anjani Exotica<br>MIHAN, Khapri<br>Nagpur, Maharashtra<br>India</p></div>
+        <div class="footer-col"><h4>For Stays</h4><p>Corporate executives<br>Project teams<br>Families<br>Short & long stays</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 SVP Corporates</span><span>Premium Corporate Accommodation · MIHAN, Nagpur</span></div>
+    </footer>
+  </main>
+
+  <script>
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{ if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)} });
+    }, {threshold:.08, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    const header = document.getElementById('siteHeader');
+    const menu = document.getElementById('mobileMenu');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const hero = document.getElementById('top');
+
+    function syncHeader(){
+      const threshold = Math.min(54, Math.max(18, hero.offsetHeight * .045));
+      header.classList.toggle('is-solid', window.scrollY > threshold);
+    }
+    syncHeader();
+    window.addEventListener('scroll', syncHeader, {passive:true});
+
+    menuToggle.addEventListener('click', ()=>{
+      const open = !menu.classList.contains('is-open');
+      menu.classList.toggle('is-open', open);
+      header.classList.toggle('menu-open', open);
+      menuToggle.setAttribute('aria-expanded', String(open));
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+      menu.classList.remove('is-open');
+      header.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    }));
+
+    const navLinks = [...document.querySelectorAll('.desktop-nav a[data-section]')];
+    const observedIds = [...new Set(navLinks.map(a=>a.dataset.section))];
+    const spy = new IntersectionObserver((entries)=>{
+      const visible = entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if(!visible) return;
+      navLinks.forEach(a=>a.classList.toggle('is-active', a.dataset.section===visible.target.id));
+    }, {rootMargin:'-28% 0px -62% 0px',threshold:[0,.15,.4]});
+    observedIds.forEach(id=>{const el=document.getElementById(id);if(el)spy.observe(el)});
+  </script>
+</body>
+</html>
